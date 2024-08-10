@@ -1,0 +1,5 @@
+Explanation
+Banner Component: Calls handleSearch whenever the input value changes, triggering a refetch of the food data.
+Home Component: Uses a useEffect hook to automatically update the menuTab state based on the search query results.
+Foods Component: Filters the food items based on the selected menuTab and displays them accordingly.
+This setup ensures that the food type is automatically selected based on the search query, and the relevant food items are displayed.
