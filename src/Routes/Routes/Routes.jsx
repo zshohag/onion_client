@@ -47,14 +47,17 @@ export const router = createBrowserRouter([
         path: "delivery",
         element: <DeliveryForm />,
       },
-
       {
         path: "order",
-        element: <Order />,
+        element: (
+          <>
+            <Order />
+          </>
+        ),
       },
       {
         path: "ordersuccess",
-        element: <OrderSuccess/>,
+        element: <OrderSuccess />,
       },
     ],
   },

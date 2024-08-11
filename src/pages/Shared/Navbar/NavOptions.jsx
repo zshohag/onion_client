@@ -1,25 +1,9 @@
-// import { Link } from "react-router-dom";
-
-// const NavOptions = () => (
-//   //  GET CART LENGTH
-//   //const [cart] = useCart();
-
-//   <>
-//     <li>
-//       <Link to="/">HOME</Link>
-//     </li>
-//     <li>
-//       <Link to="mycart">MY CART</Link>
-//     </li>
-//   </>
-// );
-
-// export default NavOptions;
-// NavOptions.jsx
-
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavOptions = ({ onOptionClick }) => {
+  const { user } = useContext(AuthContext);
   return (
     <>
       <li>
@@ -27,16 +11,23 @@ const NavOptions = ({ onOptionClick }) => {
           HOME
         </Link>
       </li>
-      <li>
-        <Link to="mycart" onClick={onOptionClick}>
-          MY CART
-        </Link>
-      </li>
-      <li>
-        <Link to="order" onClick={onOptionClick}>
-        MY ORDER
-        </Link>
-      </li>
+
+      {user ? (
+        <>
+          <li>
+            <Link to="mycart" onClick={onOptionClick}>
+              MY CART
+            </Link>
+          </li>
+          <li>
+            <Link to="order" onClick={onOptionClick}>
+              MY ORDER
+            </Link>
+          </li>
+        </>
+      ) : (
+        <></>
+      )}
     </>
   );
 };

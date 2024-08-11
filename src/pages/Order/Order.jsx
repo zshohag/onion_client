@@ -45,45 +45,6 @@ const Order = () => {
   };
 
   //
-  // const handlePlaceOrder = async () => {
-  //   const orderDetails = {
-  //     delivery: input,
-  //     cart: cart,
-  //     total: parseFloat(total.toFixed(2)),
-  //   };
-
-  //   try {
-  //     const response = await fetch("https://onion-server.vercel.app/orders", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(orderDetails),
-  //     });
-  //     if (response.ok) {
-  //       swal(
-  //         "Order Placed!",
-  //         `You have ordered ${cart.length} items successfully!`,
-  //         "success"
-  //       );
-  //       refetch();
-  //       setDisabled(true);
-  //       navigate(`/os`)
-  //     } else {
-  //       const errorData = await response.json();
-  //       swal(
-  //         "Failed to place order",
-  //         errorData.message || "Please try again",
-  //         "error"
-  //       );
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //     swal("Failed to place order", "Please try again", "error");
-  //   }
-  // };
-
-  //
   const handlePlaceOrder = async () => {
     const orderDetails = {
       delivery: input,

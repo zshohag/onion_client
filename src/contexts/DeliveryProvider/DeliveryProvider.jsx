@@ -25,27 +25,3 @@ const DeliveryProvider = ({ children }) => {
 };
 
 export default DeliveryProvider;
-
-// import { createContext, useState } from "react";
-
-// export const DeliveryContext = createContext();
-
-// const DeliveryProvider = ({ children }) => {
-//   const [input, setInput] = useState({});
-//   const [disabled, setDisabled] = useState(true);
-
-//   const value = {
-//     input,
-//     disabled,
-//     setInput,
-//     setDisabled,
-//   };
-
-//   return (
-//     <DeliveryContext.Provider value={value}>
-//       {children}
-//     </DeliveryContext.Provider>
-//   );
-// };
-
-// export default DeliveryProvider;
